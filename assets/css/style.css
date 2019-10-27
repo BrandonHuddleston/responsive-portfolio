@@ -1,0 +1,262 @@
+html,
+body {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    color: #777;
+    background-image: url("../images/ripples.png");
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.header-container {
+    background: #fff;
+    color: white;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+.header-subcontainer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.name {
+    background: #4aaaa5;
+    float: left;
+    padding: 20px;
+    margin: 0;
+}
+
+.nav {
+    float: right;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: right;
+}
+
+.nav a {
+    color: #777;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: #4aaaa5;
+}
+
+.header-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content {
+    width: 960px;
+    line-height: 1.5em;
+    min-height: calc( 100% - 120px);
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+.content-box {
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    padding: 02%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #fff;
+    overflow: auto;
+}
+
+.content-header {
+    color: #4aaaa5;
+}
+
+hr {
+    background: #ccc;
+    color: #ccc;
+    border: 2px solid;
+}
+
+.content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-container, 
+.push {
+    height: 60px;
+} 
+
+.footer-container {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    height: 60px;
+    z-index: 99;
+    text-align: center;
+}
+
+.footer-subcontainer {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width:100%;
+    background: #666;
+    color: white;
+    height: 50px;
+    padding-bottom: 10;
+    z-index: 2;
+    border-top: 8px solid #4aaaa5;
+}
+
+.profile-image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 5px;
+}
+
+.thumbnail {
+    position: relative;
+    max-height: 400px;
+    max-width: 400px;
+    border: solid #ddd 3px;
+}
+
+.thumbnail-banner {
+    position: absolute;
+    bottom: 5px;
+    background: #4aaaa5;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 4;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.thumbnail-image {
+    max-width: 100%; 
+    max-height: 100%;
+    margin:auto;
+    display:block;
+}
+
+label {
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #dddddd;
+}
+
+input[type="submit"] {
+    background: #4aaaa5;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    width: 130px;
+}
+
+input[type="submit"]:hover {
+    background: #2f7e7a;
+    cursor: pointer;
+    color: white;
+}
+
+input[type=text]:focus,input[type="email"]:focus,textarea:focus {
+    box-shadow: 0 0 5px #4aaaa5;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #4aaaa5;
+  }
+
+@media screen and (max-width: 980px) {
+    .content,
+    .header-subcontainer {
+        width: 750px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+    .thumbnail-image {
+        width: 100%;
+    }
+    .thumbnail {
+        margin: 0 auto;}
+}
+
+@media screen and (max-width: 768px) {
+    .content,
+    .header-subcontainer {
+        width: 620px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 5px;
+    }
+    .thumbnail-image {
+        width: 100%;
+    }
+    .thumbnail {
+        margin: 0 auto;}
+}
+
+@media screen and (max-width: 640px) {
+    .content,
+    .header-subcontainer {
+        width: 450px;
+    }
+    .name, 
+    .nav {
+        float: none;
+        text-align: center;
+    }
+    .content-header {
+        text-align: center;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+    .thumbnail-image {
+        width: 80%;
+    }
+    .thumbnail {
+        margin: 0 auto;}
+}
