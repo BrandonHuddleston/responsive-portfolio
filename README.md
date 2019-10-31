@@ -1,4 +1,3 @@
-# Responsive-Portfolio
 Added Bootstrp elements
 
 Updated CSS
